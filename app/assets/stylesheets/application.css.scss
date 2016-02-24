@@ -1,0 +1,170 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+@mixin box-shadow {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
+$font-header: 'Kalam', sans-serif;
+$font-text: 'Raleway', sans-serif;
+
+$yellow: #ecd275;
+$light-green: #72d846;
+$med-green: #0ec77b;
+$dark-green: #037f5d;
+$pink: #ee8ac8;
+$magenta: #e3167b;
+$light-blue: #a0e6dc;
+$med-blue: #61e1d2; 
+$dark-blue: #20b2b1;
+
+
+body {
+	background: $light-blue;
+	font-family: $font-text;
+}
+
+.main_content {
+	padding: 0 0 50px 0;
+}
+
+.alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid $dark-blue;
+	border-radius: 5px;
+	@include box-shadow;
+	background: $med-blue;
+	font-weight: bold;
+}
+
+.navbar {
+	margin-bottom: 50px;
+	@include box-shadow;
+	border-bottom: 1px solid $light-green;
+	background: $pink;
+	.navbar-brand {
+		text-transform: uppercase;
+		letter-spacing: -1px;
+		font-weight: bold;
+		font-size: 25px;
+		font-family: $font-header;
+		a {
+			color: $dark-green;
+		}
+	}
+}
+
+.recipe {
+	background: white;
+	border-radius: 5px;
+	margin-bottom: 40px;
+	@include box-shadow;
+	.image_wrapper {
+		max-width: 100%;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;		
+	}
+	img {
+		width: 100%;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+	h2 {
+		padding: 15px 5%;
+		margin: 0;
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 1.5px;
+		a {
+			color: $dark-green;
+		}
+	}
+}
+
+#recipe_info, #ingredients, #directions {
+	background: white;
+	@include box-shadow;
+	min-height: 360px;
+	border-radius: 5px;
+	padding: 2em 8%;
+}
+
+.recipe_image {
+	max-width: 100%;
+	border-radius: 5px;
+	@include box-shadow;
+}
+
+#recipe_info {
+	h1 {
+		font-size: 36px;
+		font-weight: normal;
+		color: $dark-green;
+	}
+	.description {
+		color: $dark-blue;
+		font-size: 20px;
+	}
+}
+
+#ingredients, #directions {
+	margin-bottom: 50px;
+	ul, ol {
+		padding-left: 18px;
+		li {
+			padding: 1em 0;
+			border-bottom: 1px solid $magenta;
+		}
+	}
+}
+
+.form-inline {
+	margin-top: 15px;
+}
+
+.form-input {
+	width: 65% !important;
+	float: left;
+}
+
+.form-button {
+	float: left;
+	width: 30% !important;
+	margin-left: 5%;
+}
+
+.add-button {
+	margin-top: 25px;
+}
+
+
+
+
+
+
+
